@@ -15,7 +15,7 @@ namespace Sesion01
         public float TaxRate { get; set; }
         #endregion
 
-        #region Constructor
+        #region Constructors
 
         
         public ProductFixPrice(int productId, string name , decimal price, float taxRate) : base(productId, name)
@@ -42,8 +42,8 @@ namespace Sesion01
         public override string ToString()
         {
             return $"{base.ToString()}\n\t" +
-                $"Tax..............:{this.GetTax(),12:C2}\n\t" +
-                $"Value to pay.....: {this.GetPrice(),12:C2}";
+                $"Tax................: {this.GetTax(),12:C2}\n\t" +
+                $"Value to pay.......: {this.GetPrice(),12:C2}";
         }
     }
     #endregion

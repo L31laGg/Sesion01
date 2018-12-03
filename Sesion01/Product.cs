@@ -8,34 +8,19 @@ namespace Sesion01
 {
     public abstract class Product
     {
-        #region Atributes
-        private int productId;
-
-        private string name;
-        private decimal price;
-        private float taxRate;
-        #endregion
-
         #region Properties
         public int ProductId { get; set; }
 
-        public String Name { get; set; }
+        public string Name { get; set; }
         #endregion
 
         #region Constructors
-        public Product(int productId, String name)
+        public Product(int productId, string name)
         {
             this.ProductId = productId;
             this.Name = name;
         }
-
-        public Product(int productId, string name, decimal price, float taxRate) : this(productId, name)
-        {
-            this.price = price;
-            this.taxRate = taxRate;
-        }
         #endregion
-
 
         #region Methods
         public abstract decimal GetPrice();
@@ -44,9 +29,8 @@ namespace Sesion01
 
         public override string ToString()
         {
-            return $"{this.ProductId} {this.name}"; //Extrapolación
+            return $"{this.ProductId,6} {this.Name}";
         }
-
         #endregion
 
     }
